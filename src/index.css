@@ -1,13 +1,167 @@
+/* Alap reset és betűtípus */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+  color: #222;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* App container */
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Címsor */
+h1 {
+  font-weight: 700;
+  color: #0a74da;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* App playlist layout */
+.App-playlist {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* SearchResults és Playlist box */
+.SearchResults, .Playlist {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(10 116 218 / 0.15);
+}
+
+/* Input mező a playlist névnek */
+.Playlist input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1.1rem;
+  border: 2px solid #0a74da;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.Playlist input:focus {
+  outline: none;
+  border-color: #0853a1;
+}
+
+/* Track lista */
+.TrackList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Egy-egy Track */
+.Track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.Track:hover {
+  background-color: #e6f0fc;
+  border-left: 4px solid #0a74da;
+}
+
+/* Track info */
+.Track h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0a74da;
+  font-weight: 600;
+}
+
+.Track p {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Gomb */
+button.Track-action {
+  background-color: #0a74da;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+button.Track-action:hover {
+  background-color: #0853a1;
+}
+
+/* Save to Spotify gomb a Playlist-ben */
+.Playlist button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #1DB954; /* Spotify zöld */
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Playlist button:hover {
+  background-color: #17a74a;
+}
+
+/* SearchBar komponens gomb és input egyszerű */
+.SearchBar {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.SearchBar input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border: 2px solid #0a74da;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.SearchBar input:focus {
+  border-color: #0853a1;
+}
+
+.SearchBar button {
+  padding: 10px 25px;
+  background-color: #0a74da;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.SearchBar button:hover {
+  background-color: #0853a1;
 }
